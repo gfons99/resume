@@ -49,7 +49,9 @@ resume/
 │   ├── ai-sparkles-icon.svg            # Dark golden-yellow favicon (#ca9f04)
 │   ├── favicon.svg                     # Fallback SVG favicon
 │   ├── gadiel-fonseca-master-resume.pdf # ATS-optimized resume PDF
-│   └── gadiel-fonseca-master-resume.tex # Resume LaTeX source code
+│   ├── gadiel-fonseca-master-resume.tex # Resume LaTeX source code
+│   ├── mexico-flag-icon.svg            # Mexico flag vector badge
+│   └── united-states-flag-icon.svg     # United States flag vector badge
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.tsx                  # Responsive header navigation

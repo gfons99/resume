@@ -4,9 +4,17 @@ import { ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '../context/useLanguage';
 import { type Language } from '../i18n/translations';
 
-const languages: { code: Language; name: string; flag: string }[] = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇲🇽' },
+const languages: { code: Language; name: string; flagSrc: string }[] = [
+  {
+    code: 'en',
+    name: 'English',
+    flagSrc: `${import.meta.env.BASE_URL}united-states-flag-icon.svg`,
+  },
+  {
+    code: 'es',
+    name: 'Español',
+    flagSrc: `${import.meta.env.BASE_URL}mexico-flag-icon.svg`,
+  },
 ];
 
 export function LanguageDropdown() {
@@ -30,11 +38,15 @@ export function LanguageDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg text-slate-700 dark:text-gray-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-sm font-medium focus:outline-none border border-transparent hover:border-slate-300 dark:hover:border-slate-700"
+        className="flex items-center space-x-2 px-2.5 sm:px-3 py-1.5 rounded-xl glass-card text-xs sm:text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 transition-all cursor-pointer shadow-xs focus:outline-none"
         aria-label="Select language"
         aria-expanded={isOpen}
       >
-        <span className="text-base leading-none select-none">{currentLang.flag}</span>
+        <img
+          src={currentLang.flagSrc}
+          alt={`${currentLang.name} flag`}
+          className="w-5 h-3.5 object-cover rounded-xs border border-black/10 dark:border-white/10 flex-shrink-0"
+        />
         <span className="hidden sm:inline-block text-xs font-semibold tracking-wide">
           {currentLang.name}
         </span>
@@ -42,7 +54,7 @@ export function LanguageDropdown() {
           {currentLang.code}
         </span>
         <ChevronDown
-          className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 ${
+          className={`w-3.5 h-3.5 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -66,14 +78,18 @@ export function LanguageDropdown() {
                     setLanguage(lang.code);
                     setIsOpen(false);
                   }}
-                  className={`w-full flex items-center justify-between px-3 py-2 text-xs sm:text-sm font-medium transition-colors ${
+                  className={`w-full flex items-center justify-between px-3 py-2 text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
                     isSelected
                       ? 'text-blue-600 dark:text-blue-400 bg-blue-50/80 dark:bg-blue-950/40'
                       : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80'
                   }`}
                 >
                   <div className="flex items-center space-x-2">
-                    <span className="text-base leading-none select-none">{lang.flag}</span>
+                    <img
+                      src={lang.flagSrc}
+                      alt={`${lang.name} flag`}
+                      className="w-5 h-3.5 object-cover rounded-xs border border-black/10 dark:border-white/10 flex-shrink-0"
+                    />
                     <span>{lang.name}</span>
                   </div>
                   {isSelected && <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />}

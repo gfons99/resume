@@ -67,7 +67,9 @@ resume/
 │   ├── ai-sparkles-icon.svg            # Dark golden-yellow sparkle favicon (#ca9f04)
 │   ├── favicon.svg                     # Fallback favicon SVG
 │   ├── gadiel-fonseca-master-resume.pdf # ATS-optimized downloadable resume PDF
-│   └── gadiel-fonseca-master-resume.tex # Master LaTeX source document
+│   ├── gadiel-fonseca-master-resume.tex # Master LaTeX source document
+│   ├── mexico-flag-icon.svg            # Mexico flag SVG badge for i18n
+│   └── united-states-flag-icon.svg     # USA flag SVG badge for i18n
 ├── src/
 │   ├── main.tsx                        # React DOM root entrypoint
 │   ├── App.tsx                         # Layout orchestrator, layout composition

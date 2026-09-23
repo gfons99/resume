@@ -27,12 +27,14 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="flex-shrink-0 flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-blue-500 glow-blue flex items-center justify-center">
-              <span className="text-white font-bold text-lg">G</span>
-            </div>
+          <a href="#home" className="flex-shrink-0 flex items-center space-x-2.5 group">
+            <img
+              src={`${import.meta.env.BASE_URL}ai-sparkles-icon.svg`}
+              alt="Favicon"
+              className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-200 group-hover:scale-110"
+            />
             <span className="text-slate-900 dark:text-white font-bold text-xl tracking-wider">
-              My <span className="text-blue-500 dark:text-blue-400">Resume</span>
+              Gadiel's Resume
             </span>
           </a>
 

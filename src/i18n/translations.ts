@@ -11,7 +11,7 @@ export interface LanguageContextType {
 export const translations: Record<Language, Record<string, string>> = {
   en: {
     // Nav
-    'nav.brand': 'My Resume',
+    'nav.brand': "Gadiel's Resume",
     'nav.home': 'Home',
     'nav.education': 'Education',
     'nav.skills': 'Skills',

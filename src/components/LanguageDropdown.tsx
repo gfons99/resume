@@ -38,7 +38,7 @@ export function LanguageDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex items-center space-x-2 px-2.5 sm:px-3 py-1.5 rounded-xl glass-card text-xs sm:text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 transition-all cursor-pointer shadow-xs focus:outline-none"
+        className="h-9 flex items-center space-x-2 px-3 rounded-xl glass-card text-xs sm:text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 transition-all cursor-pointer shadow-xs focus:outline-none"
         aria-label="Select language"
         aria-expanded={isOpen}
       >
@@ -54,7 +54,7 @@ export function LanguageDropdown() {
           {currentLang.code}
         </span>
         <ChevronDown
-          className={`w-3.5 h-3.5 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${
+          className={`w-3.5 h-3.5 text-slate-500 dark:text-slate-400 transition-transform duration-150 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -63,11 +63,12 @@ export function LanguageDropdown() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 8, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 8, scale: 0.95 }}
-            transition={{ duration: 0.15, ease: 'easeOut' }}
-            className="absolute right-0 mt-2 w-36 py-1.5 rounded-xl glass-card bg-white/95 dark:bg-slate-900/95 shadow-xl border border-slate-200 dark:border-slate-800 z-50 overflow-hidden backdrop-blur-md"
+            key="language-dropdown-menu"
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 4 }}
+            transition={{ duration: 0.1, ease: 'easeOut' }}
+            className="absolute right-0 mt-2 w-36 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 shadow-xl border border-slate-200 dark:border-slate-800 z-50 overflow-hidden backdrop-blur-md"
           >
             {languages.map((lang) => {
               const isSelected = lang.code === language;

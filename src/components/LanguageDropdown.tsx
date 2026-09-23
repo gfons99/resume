@@ -38,7 +38,7 @@ export function LanguageDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="h-9 flex items-center space-x-2 px-3 rounded-xl glass-card text-xs sm:text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 transition-all cursor-pointer shadow-xs focus:outline-none"
+        className="h-9 flex items-center space-x-2 px-3 rounded-xl glass-card text-xs sm:text-sm text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-500/50 transition-all cursor-pointer shadow-xs focus:outline-none btn-glow-yellow"
         aria-label="Select language"
         aria-expanded={isOpen}
       >

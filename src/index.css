@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-cyber-blue: #3b82f6;
+  --color-cyber-blue-500: #3b82f6;
+  --color-cyber-blue-400: #60a5fa;
+  --color-cyber-dark: #0f172a;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-[#0B1026] dark:text-slate-200 antialiased overflow-x-hidden selection:bg-blue-500/30 font-sans transition-colors duration-700;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/40 dark:border-slate-700/50 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  .glass-card {
+    @apply bg-white/50 dark:bg-slate-800/40 backdrop-blur-sm border border-white/50 dark:border-slate-700/50 hover:border-blue-500/50 dark:hover:border-blue-500/50 hover:bg-white/80 dark:hover:bg-slate-800/60 transition-all duration-300 rounded-xl;
+  }
+  .glow-blue {
+    @apply shadow-[0_0_15px_rgba(59,130,246,0.5)];
+  }
+  .glow-blue-strong {
+    @apply shadow-[0_0_25px_rgba(59,130,246,0.8)];
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+  }
+  
+  .star-twinkle {
+    animation: twinkle var(--twinkle-duration, 4s) ease-in-out infinite;
+  }
+  
+  .star-pulsate {
+    animation: pulsate var(--pulsate-duration, 6s) ease-in-out infinite;
+  }
+  
+  .shooting-star {
+    opacity: 0;
+    animation: shooting-star var(--shooting-duration, 8s) linear infinite;
+    animation-delay: var(--shooting-delay, 0s);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulsate {
+  0%, 100% { transform: scale(0.6); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translate(0, 0) rotate(215deg) scale(1);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  15% {
+    transform: translate(-300px, 300px) rotate(215deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-300px, 300px) rotate(215deg) scale(0);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,181 @@
+%% =============================================================================
+%% Master Portfolio Resume — Gadiel Moisés Fonseca Ramírez
+%% =============================================================================
+%% Comprehensive, All-in-One Professional Resume for Public Online Portfolio
+%% Features full career trajectory, in-depth technical achievements, and metrics.
+%% =============================================================================
+
+\documentclass[10pt, letterpaper]{article}
+
+% ---- Packages ----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.92]{helvet}      % Helvetica ≈ Arial (ATS-safe sans-serif)
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=0.4in, top=0.35in, bottom=0.45in]{geometry}
+\usepackage{enumitem}                 % Customizable lists
+\usepackage{titlesec}                 % Section heading formatting
+\usepackage[hidelinks]{hyperref}      % Clickable links without colored boxes
+\usepackage{xcolor}                   % Subtle color styling
+\usepackage{parskip}                  % Paragraph spacing instead of indentation
+\usepackage{fancyhdr}                 % Custom headers/footers
+\usepackage{lastpage}                 % Total page count reference
+
+% ---- Colors ----
+\definecolor{linkblue}{RGB}{0, 70, 170}  % Visible clickable link color
+
+% ---- PDF Metadata (ATS & Search Indexing) ----
+\hypersetup{
+    pdftitle={Gadiel Moises Fonseca Ramirez - Master Portfolio Resume},
+    pdfauthor={Gadiel Moises Fonseca Ramirez},
+    pdfsubject={Computer Engineer - Full-Stack Software Engineer and Scientific Application Analyst},
+    pdfkeywords={
+        Software Engineer, Computer Engineer, Full-Stack Development,
+        Scientific Applications, LIMS, Agilent SLIMS, Sapio LIMS,
+        Java, Java 21, Java 17, Spring Boot, Spring Security, Spring Data JPA,
+        Groovy, Hibernate, JPA, REST API, JSON, Postman, Splunk,
+        Linux, Apache Tomcat, HTTPD, AWS, S3, SNS, SQS, Gradle, Maven,
+        Git, Bitbucket, GitHub, HeidiSQL, SQL, PostgreSQL, Flyway,
+        TypeScript, React, Vite, Firebase Authentication, Docker,
+        Docker Compose, FFmpeg, E-Commerce, RBAC, OpenAPI, Swagger,
+        C, C++, Python, Agile, Scrum, Biobanking, Regeneron, Cloudflare Tunnels, SMTP
+    }
+}
+
+% ---- Page Footer (Page X of Y) ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\setlength{\parindent}{0pt}
+
+% Section headings: bold, uppercase, with a horizontal rule
+\titleformat{\section}
+    {\normalsize\bfseries\uppercase}   % Format
+    {}                                % Label
+    {0em}                             % Sep
+    {}                                % Before code
+    [\titlerule]                      % After code (horizontal line)
+
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+% Tight list spacing
+\setlist[itemize]{
+    leftmargin=1.4em,
+    itemsep=1pt,
+    parsep=0pt,
+    topsep=1pt
+}
+
+% ---- Custom Commands ----
+% Job entry: {Company}{Role}{Location}{Dates}
+\newcommand{\jobentry}[4]{%
+    \textbf{#1} \hfill #3 \\
+    \textit{#2} \hfill \textit{#4}
+    \vspace{2pt}
+}
+
+% Education entry: {School}{Degree}{Location}{Dates}
+\newcommand{\eduentry}[4]{%
+    \textbf{#1} \hfill #3 \\
+    \textit{#2} \hfill \textit{#4}
+    \vspace{2pt}
+}
+
+% ============================================================================
+\begin{document}
+
+% ---- HEADER ----
+\begin{center}
+    {\Large\textbf{Gadiel Moisés Fonseca Ramírez}} \\[3pt]
+    Coyoacán, Mexico City \enspace$|$\enspace
+    \href{mailto:gadielfonsecamx@gmail.com}{\color{linkblue}gadielfonsecamx@gmail.com} \enspace$|$\enspace
+    553-567-4941 \\[2pt]
+    \href{https://www.linkedin.com/in/gadiel-fonseca/}{\color{linkblue}linkedin.com/in/gadiel-fonseca} \enspace$|$\enspace
+    \href{https://github.com/gfons99}{\color{linkblue}github.com/gfons99}
+\end{center}
+
+\vspace{-4pt}
+
+% ---- EDUCATION ----
+\section{Education}
+
+\eduentry{National Autonomous University of Mexico (UNAM)}{Bachelor of Computer Engineering}{Mexico City}{}
+
+\textit{Relevant Coursework:} Data Structures \& Algorithms, Statistical Analysis \& Data Mining, Combinational \& Sequential Logic Circuits Design, Microcontroller \& Embedded Systems Programming with Multi-Addressing Modes, Computer Graphics \& 3D Modeling, Computer Networks \& Cybersecurity, Operating Systems, Database Systems.
+
+% ---- SKILLS ----
+\section{Skills}
+
+\begin{itemize}[leftmargin=0.8em, itemsep=2pt]
+    \item \textbf{Programming Languages:} Java (21/17/8), Groovy, C, C++, Python, SQL, SOQL, JavaScript, TypeScript, Bash, HTML (Markup), CSS (Styling), XML
+    \item \textbf{Enterprise \& LIMS Software:} Agilent SLIMS, Sapio LIMS (Biobanking, Freezer Sample Management, Plugin Architecture, System Rules)
+    \item \textbf{Frameworks \& Libraries:} Spring Boot, Spring Security, Spring Data JPA, Hibernate, React, React Router, Vite, Bootstrap, Tailwind CSS, Lombok, Mendix (Low-Code Platform)
+    \item \textbf{Hardware \& Embedded Systems:} Verilog, VHDL, FPGA Design, Microcontrollers, Analog-to-Digital Converters (ADC), UART, I2C, SPI
+    \item \textbf{Databases \& Storage:} PostgreSQL, Oracle DB, HeidiSQL, SQL Developer, Flyway (Schema Migrations), Relational Schema Design, JSON, Amazon S3
+    \item \textbf{DevOps, Cloud \& Servers:} Linux (Debian-based, Arch-based), Docker, Docker Compose, Cloudflare Tunnels, Apache HTTPD, Apache Tomcat, \texttt{systemctl}, SSH, SMTP (Email Services), AWS (S3, SNS, SQS), Firebase Authentication (JWT, Google OAuth), Apache Maven, Gradle, Git, Bitbucket, GitHub, CI/CD Pipelines, pnpm Workspaces
+    \item \textbf{Observability \& Developer Tools:} Splunk, Postman, FFmpeg, OpenAPI/Swagger, IntelliJ IDEA, Visual Studio Code, Eclipse
+    \item \textbf{Methodologies \& Practices:} Agile/Scrum, Sprint Planning, Jira, Jira Tempo, Code Reviews, Six Sigma
+    \item \textbf{Spoken Languages:} Spanish (Native), English (C1 Advanced --- EF SET Score 70/100), French (A2 Elementary)
+\end{itemize}
+
+% ---- CERTIFICATIONS ----
+\section{Certifications}
+
+\begin{itemize}[leftmargin=0.8em, itemsep=1.5pt]
+    \item \textbf{EF SET Standard English Certificate:} 70/100 (C1 Advanced) --- Verified Professional Fluency (2024)
+    \item \textbf{Alura Latam Professional Certificates:} Git \& GitHub (2024) \enspace$\cdot$\enspace HTML5 \& CSS3 (2024) \enspace$\cdot$\enspace Programming Logic with JavaScript (2024)
+    \item \textbf{Google Cloud Computing Foundations:} Cloud architecture, infrastructure services, and storage solutions (2023)
+    \item \textbf{Six Sigma Green Belt:} Quality management, statistical process optimization, and defect reduction (2021)
+    \item \textbf{Macquarie University / Coursera:} Excel Skills for Business: Essentials (2021)
+\end{itemize}
+
+% ---- PROJECTS ----
+\section{Projects}
+
+\textbf{Planeta Gema --- Full-Stack Gemstone \& Jewelry E-Commerce Platform} --- \textit{Personal Project} \\
+\href{https://planetagema.com}{\color{linkblue}https://planetagema.com} \enspace$|$\enspace \textit{Repository: GitHub (Private)}
+\vspace{2pt}
+\begin{itemize}
+    \item Architected and developed a production-ready full-stack multi-vendor e-commerce platform using Java 21 / Spring Boot 3, React 19 / Vite 6, PostgreSQL 16 with Flyway schema migrations (24 versions), and Firebase Authentication (JWT + Google OAuth), serving a gemstone and jewelry marketplace with complete product lifecycle management.
+    \item Engineered a configurable multi-tier pricing engine using JSON-backed fee models and JPA \texttt{@PrePersist}/\texttt{@PreUpdate} lifecycle hooks with two-pass compounding, supporting nested percentage/fixed fees and eliminating hardcoded pricing logic across all product categories.
+    \item Designed a unified hierarchical filter tree (adjacency-list pattern) replacing 10+ rigid catalog tables with a single recursive structure, reducing catalog-related backend code by approximately 60\% and enabling zero-deployment attribute management through an admin drag-and-drop UI.
+    \item Built a server-side media processing pipeline using FFmpeg and Spring Boot, generating multi-resolution WebP images and H.264/AAC videos with poster extraction in single-pass \texttt{filter\_complex} invocations, reducing average image payload by approximately 85\%.
+    \item Implemented multi-vendor RBAC with Firebase JWT verification, merchant-scoped data isolation, shared-ownership profit splitting, and automated daily per-merchant financial settlement reports; orchestrated a 3-service Docker Compose stack with health checks, hot reload, and API proxying for single-command full-stack startup.
+\end{itemize}
+
+\newpage
+
+% ---- PROFESSIONAL EXPERIENCE ----
+\section{Professional Experience}
+
+\jobentry{Zifo RnD Solutions}{Scientific Application Analyst \& Software Engineer}{Mexico City (Client: Regeneron Pharmaceuticals)}{May 2025 -- September 2026}
+\begin{itemize}
+    \item Developed and deployed custom Java plugins (fat JARs via Gradle/Maven) and Groovy rules for Agilent SLIMS and Sapio LIMS, automating storage and fulfillment workflows for over 6,000,000 biological sample tubes in automated freezers.
+    \item Architected enterprise migration safeguards during weekend cutover to Sapio: engineered custom Groovy system-level rules, API 403 Forbidden interceptors, and JSON payload validation to enforce strict read-only states across 6M+ records with zero data corruption.
+    \item Standardized inter-departmental REST API JSON schemas for sample intake and retrieval; designed and automated comprehensive Postman integration test suites, eliminating cross-departmental data transfer discrepancies.
+    \item Managed multi-tier Linux application instances over SSH, orchestrating Apache HTTPD, Tomcat, and SLIMS gateway services via \texttt{systemctl}; utilized Splunk distributed log queries to diagnose unfulfilled transactions and recover dropped request payloads.
+    \item Refactored heavy scientific query plugins into asynchronous background worker threads, resolving 1-minute browser timeout warnings and completely preventing duplicate order submissions from laboratory technicians.
+    \item Founded Zifo's centralized global LIMS engineering repository and starter codebase, standardizing modular Java plugin templates, resolving private vendor Maven dependency routing, and reducing new engineer onboarding time from days to hours---recognized by senior executive leadership as a major organizational milestone.
+    \item Led daily 9:00 AM EST Scrum standups with Regeneron Biobank supervisors and technicians across three global time zones (India, US, Mexico), translating complex laboratory requirements into technical backlog tickets; completed a 6-week on-site technical immersion in Chennai, India.
+\end{itemize}
+
+\vspace{2pt}
+
+\jobentry{Siemens DI SW}{Software Engineer Intern}{Mexico City}{May 2024 -- April 2025}
+\begin{itemize}
+    \item Developed a modular REST API using Java 17 and Spring Boot, implementing Spring Data JPA with DTO models for secure multi-database connectivity and Maven multi-profile builds for staging/production deployment.
+    \item Engineered an interactive front-end data visualization platform in Mendix, consolidating disparate Oracle DB and Salesforce datasets with dynamic filtering, sorting, custom query views, and exportable reports.
+    \item Automated incoming data request processing by configuring SMTP email services and scheduled background tasks to monitor inbound email streams, trigger transactional database updates, and dispatch automated alerts.
+    \item Maintained disciplined version control and repository hygiene using Git and Bitbucket, facilitating seamless pull request reviews, automated build validations, and zero-regression production deployments.
+\end{itemize}
+
+\vspace{2pt}
+
+\jobentry{Qualfon}{Bilingual Customer Service Representative \& Team Leader}{Mexico City}{January 2020 -- July 2022}
+\begin{itemize}
+    \item Proactively supported, guided, and coached team members on call handling strategies, communication protocols, and system workflows while successfully resolving escalated, critical customer inquiries.
+    \item Audited daily operational results following standardized performance measurement frameworks to track individual KPIs, identify coaching opportunities, and uphold service level agreements (SLAs).
+\end{itemize}
+
+\end{document}

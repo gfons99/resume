@@ -19,12 +19,7 @@ export function Navbar() {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="fixed top-0 left-0 right-0 z-50 glass"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="flex-shrink-0 flex items-center space-x-2.5 group btn-glow-yellow px-2 py-1 rounded-xl">
@@ -33,8 +28,8 @@ export function Navbar() {
               alt="Favicon"
               className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-200 group-hover:scale-110"
             />
-            <span className="text-slate-900 dark:text-white font-bold text-xl tracking-wider">
-              Gadiel's Resume
+            <span className="text-slate-900 dark:text-white font-bold text-xl tracking-wider whitespace-nowrap">
+              Gadiel M.
             </span>
           </a>
 
@@ -110,6 +105,6 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }

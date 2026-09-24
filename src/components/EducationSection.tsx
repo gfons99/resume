@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { GraduationCap, BookOpen, Award, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/useLanguage';
 
@@ -29,28 +28,16 @@ export function EducationSection() {
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             {t('edu.title')}
           </h2>
           <div className="w-20 h-1 bg-blue-500 rounded glow-blue" />
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Degree */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="glass-card p-6 lg:col-span-2"
-          >
+          <div className="glass-card p-6 lg:col-span-2">
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-xl bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex-shrink-0">
                 <GraduationCap className="w-8 h-8 text-blue-600 dark:text-blue-400" />
@@ -68,16 +55,10 @@ export function EducationSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Relevant Coursework */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="glass-card p-6"
-          >
+          <div className="glass-card p-6">
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">
@@ -94,16 +75,10 @@ export function EducationSection() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Certifications */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card p-6"
-          >
+          <div className="glass-card p-6">
             <div className="flex items-center gap-2 mb-4">
               <Award className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">
@@ -118,7 +93,7 @@ export function EducationSection() {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

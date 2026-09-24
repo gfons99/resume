@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
 import { useLanguage } from '../../context/useLanguage';
 
@@ -40,18 +39,12 @@ public class ProductPricing {
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
       
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             {t('projects.title')}
           </h2>
           <div className="w-20 h-1 bg-blue-500 rounded glow-blue" />
-        </motion.div>
+        </div>
 
         <div className="max-w-4xl mx-auto">
           {projects.map((project, index) => (

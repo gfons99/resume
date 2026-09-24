@@ -27,10 +27,7 @@ export function ProjectCard({
   const [activeTab, setActiveTab] = useState<'overview' | 'code' | 'result'>('overview');
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+    <div 
       className="glass-card flex flex-col overflow-hidden border border-slate-300 dark:border-slate-700/60 shadow-lg glow-blue hover:shadow-blue-500/20 transition-all duration-300"
     >
       <div className="p-1 border-b border-slate-300 dark:border-slate-700/60 bg-slate-200/50 dark:bg-slate-900/50 flex items-center justify-between">
@@ -147,6 +144,6 @@ export function ProjectCard({
           </AnimatePresence>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

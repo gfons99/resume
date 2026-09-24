@@ -1,21 +1,12 @@
-import { motion } from 'framer-motion';
-
 interface SkillCardProps {
   title: string;
   skills: string[];
-  delay: number;
+  delay?: number;
 }
 
-export function SkillCard({ title, skills, delay }: SkillCardProps) {
+export function SkillCard({ title, skills }: SkillCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
-      whileHover={{ scale: 1.02 }}
-      className="glass-card p-6 flex flex-col h-full relative overflow-hidden group"
-    >
+    <div className="glass-card p-6 flex flex-col h-full relative overflow-hidden group hover:scale-[1.02] transition-transform duration-200">
       <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-[50px] group-hover:bg-blue-500/10 transition-colors duration-500" />
       <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 z-10">{title}</h3>
       <div className="flex flex-wrap gap-2 z-10">
@@ -28,6 +19,6 @@ export function SkillCard({ title, skills, delay }: SkillCardProps) {
           </span>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }

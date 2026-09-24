@@ -1,5 +1,4 @@
 import { SkillCard } from './SkillCard';
-import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/useLanguage';
 
 export function SkillsSection() {
@@ -56,18 +55,12 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             {t('skills.title')}
           </h2>
           <div className="w-20 h-1 bg-blue-500 rounded glow-blue" />
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {skillCategories.map((category, index) => (

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/useLanguage';
 
@@ -59,18 +58,12 @@ export function ExperienceSection() {
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             {t('exp.title')}
           </h2>
           <div className="w-20 h-1 bg-blue-500 rounded glow-blue" />
-        </motion.div>
+        </div>
 
         <div className="relative">
           {/* Timeline line */}
@@ -78,12 +71,8 @@ export function ExperienceSection() {
 
           <div className="space-y-10">
             {experiences.map((exp, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
                 className="relative md:pl-14"
               >
                 {/* Timeline dot */}
@@ -131,7 +120,7 @@ export function ExperienceSection() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

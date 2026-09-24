@@ -11,7 +11,7 @@ export interface LanguageContextType {
 export const translations: Record<Language, Record<string, string>> = {
   en: {
     // Nav
-    'nav.brand': "Gadiel's Resume",
+    'nav.brand': 'Gadiel M.',
     'nav.home': 'Home',
     'nav.education': 'Education',
     'nav.skills': 'Skills',
@@ -139,7 +139,7 @@ export const translations: Record<Language, Record<string, string>> = {
   },
   es: {
     // Nav
-    'nav.brand': 'Mi CV',
+    'nav.brand': 'Gadiel M.',
     'nav.home': 'Inicio',
     'nav.education': 'Educación',
     'nav.skills': 'Habilidades',
